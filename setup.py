@@ -7,7 +7,7 @@ setup(
     #metadata here
     name="JSEStocks",
     long_description=long_description,
-    long_description_content_type='text/markdown'
+    long_description_content_type='text/markdown',
     version="0.0.2",
     author="Ashlin Darius Govindasamy",
     author_email="adg@adgstudios.co.ZA",
