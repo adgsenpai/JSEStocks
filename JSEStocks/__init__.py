@@ -1,22 +1,17 @@
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAScAAACrCAMAAAATgapkAAAAe1BMVEUoKCj///8uLi4rKysAAAAjIyMbGxsgICAICAiHh4fPz88PDw8WFhb6+vq6urqfn59ERETp6elkZGQUFBTX19dXV1fz8/Pi4uJJSUl/f3+0tLRycnJAQEDV1dXFxcWUlJQ1NTWRkZGkpKRoaGiCgoJYWFirq6u2trZ3d3cDANGnAAAHmUlEQVR4nO2c63aqOhRGEZOAglfwVq/orqfv/4QHrUGQJHwgFmzX/NMxdpWSucPKSrKCZXeJYmzLtohiyBMGecIgTxjkCYM8YZAnDPKEQZ4wyBMGecIgTxjkCYM8YZAnDPKEQZ4wyBMGecIgTxjkCYM8YZAnDPKEQZ4wyBMGecIgTxjkCYM8YZAnDPKEQZ4wyBMGecIgTxjkCYM8YZAnDPKEQZ4wyBMGecIgTxjkCaN9nrgjhB8jHN70raRolScuPMYO069oPxrte+slY55oiaxaPHkuQFGDuc8OveGik2YyXFlMFN8A8vczANfMUoenYNcvJtwYRXFmj7KOJNuVFxTcgNgCN5Bmuyorqg5PbKBs4ANLgyfOljv9Nwcj32zKQ/5+hpFfso2t8ORbBktX9swx3MAf8cRWxd+ezFz9DfwNT+wDaxrT3sCf8MT6Dx+cL/rD4XC3nTz8e9/TmX4XT9CtaTyxTGjqRzOXMdeLiX8uo236l5OuJki9iSfnX6+Y6KD8rnu833y4Clw/rSJOqbqj+f0Dc1stygH+fpZZ2fS1ljxTIKhb+HnvLVNVRskDFqVEaeYy0A2kKZ3lNzxvYUkQOmpH/kDcH82FYdR7Kc16Ej0pYKUfzWKb/xJRO9PnXkiznpLu1DP3E2+WDKn/Sk/NaqFRT84U7SViI0UNvB+5tUca9eTJDLNbGFfF5vuTQ97MQkujnuRjNwSis7j0vXDJGlqPqsUTQ1A0kN+609Q0yZW4x8G6KUv1ePIWk2Lm41wb+ezmCRvshddMCL/S5PxO3NYJFg2N9WVo1NMte9o2lTyWoFFP0fdvduQJ8tQnT2ZPfy0+IZoUnhw53jU4jqHU4YlPTcipmWKdzrl5isqumv08teSZjgmm98RuO3Zz/8n8kRvvQEEL158Mnvz9rUNtn0u0A+jBT9PIuq8Zg6fkwesseNGer4k3WR83Y/LkJavjgx6rHqR+vSfLve8SzKPARebDCn6/J2eZvvvd2mV+BVe/35Pln7IN2I5mPgtK7of8AU9WcMo1IjyvNswtIevXj3cXxOZxg/zCYHv+6jIXTax4Ocq3onlPFmcjzf/6fLdfum4rSg9b4Cl+bqyz9gkZ7Ho2Unr4YlrhyeKeE6mrDq+EPV9bq/JDtMNTjM/GmgLNK8NNc3sIF1rj6Vqdwr/+UwX1K7tDMzuc37TI0wXhMes06s+VpvYNdqmWebrg+C6z18d+fpU0FJpkvWRaUCExaKGnC9wJXLbpDR861nyjFMXHZTmUbUVLPV25HOPYZEsPBwfVVf7CvKUALpgVpWL7RLU3Q54uxOPg6Z4xDBWbM+TphsOSwrvOLB+ifpWnfB1GGYKNDOlhvkP9Ck+yEcoIjOPYMk/Id8xf4cm63dqzlxGySPGc23IIOoNydPZNnCszwsffrXu+rlIe8FBss0OFamkaOadoxDlpW1f2Sutbh6q42/AUL/ck9zJrKN7xtQHq9bzck7urGDnzyLLXdQMd6uWe2G08P6lnZmW2gVn4fanSh3troKInjhaVclPtDnc3SEm05M088YB5y2i3hx4k77byrcgOrYB/xKM8Ht/f67njn+fwkvJNoAbKbDxv1XG/I/wJ7h3ireK489UxRZwsvpyX2Y9tc6ZyInIAu4d4s7xAzhKQjEjWWWxzn+W2nEPoDh8+YsgzX08VT8NbA1eFEYrJfTlFSBGyX3YmHOkhSTXn8ZlSqapUieOyxmRQtM6cTMmUsYwNE1E2EKNkkeKTCw8VqZIXJCfpVYNYCucgp/jqkTxpeWewLJz9JW85yD/CP0EVT3wj22c8XyhsGak1EYVb922CXsGe070G4bOJMF4tz7yXC+70zUudVVUsQV5xxomnTt8yhB2eBLpOv5mi/Gr5+P2Y+EKzS+uwfaLgrM25Rbqcbq+t0PS6YfKp4qOfL6Gap/uTF09w3SB/IoNN7yv/pnFcjFO7mfPI8/I9j3tBqu5nrYx0fllKP7sV53f+OtW8UTddVcmFG6xSFRVz46joHNIFBYOPWeZVa9wJ2PicUql+GY0zKskROkGapup6gfcv1bxOOJr6jDH3slQ4izJvTBmot3ATeJB9D8182JsxeS17fc7UsGgmg21eH3cfX9o0WITbcPFYQaHZ6U6TimTJt+JrbRe50pWj5glusyfLmwLHyRYW0MG9paHwKYX2nRmt9hTnR2HR7ZyxShyHRcXOFxtt4tBuT3FW0zM2bzKDcx3fP5qudD3XoVfeck9x87yR1tRkZXz33iOBt9eW0nXme9fUsNZ7ujRvtVXdyO5Ueo/MZ58fykK63brgjJAYlqX0kujz+wiC8a+PdCCeh+dTtSM9jsfG0S5zre1xClzLK8tP5ZlZLq/l5bP112r1dVrGiVRQfap6fcVv9/P7WmOPuU9cq07q25e6vOdZ1PSSZ6fGa9VDq94X3WLIEwZ5wiBPGOQJgzxhkCcM8oRBnjDIEwZ5wiBPGOQJgzxhkCcM8oRBnjDIEwZ5wiBPGOQJgzxhkCcM8oRBnjDIEwZ5wiBPGOQJgzxhkCcM8oRBnjDIEwZ5wiBPGOQJgzxhkCcM8oRBnjDIEwZ5wiBPGOQJw7YONlHM4X+m8XzERz0RIAAAAABJRU5ErkJggg==)
+import yfinance as yf
+import os, sys
 
-# JSE STOCK Python Module
+class HiddenPrints:
+    def __enter__(self):
+        self._original_stdout = sys.stdout
+        sys.stdout = open(os.devnull, 'w')
 
-this module returns stock history for any given module
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        sys.stdout.close()
+        sys.stdout = self._original_stdout
 
-## Installation
-`pip install JSEStocks`
-
-## Usage
-
-### Getting all JSE stocks
-```
-import JSEStocks
-JSEStocks.ReturnListStocks()
-```
-
-- Output
-```
+def ReturnListStocks():
+    stocks = '''
         StockCode,CompanyNames
         PRX,Prosus N.V. 
         ANH,Anheuser-Busch Inbev 
@@ -360,36 +355,10 @@ JSEStocks.ReturnListStocks()
         MZR,Mazor Group Limited 
         MLE,Mettle Investments Limited 
         MNK,Montauk Holdings Limited 
-```
+        '''
+    print(stocks)
 
-
-### Getting stock
-
-Example Tongaat Hullets with code of `TON`
-
-```
-import JSEStocks
-JSEStocks.GetStockHistory('TON')
-
-```
-
-Output
-```
-                   Open         High          Low        Close    Adj Close  Volume       Date
-Date
-2000-01-04  4066.684082  4066.684082  3996.163574  3996.163574  1829.829346  183560 2000-01-04
-2000-01-05  3917.807617  4011.834961  3882.547119  3902.136230  1786.775024  117768 2000-01-05
-2000-01-06  3839.451416  3839.451416  3721.916992  3725.834961  1706.046875  106109 2000-01-06
-2000-01-07  3761.095215  3917.807617  3761.095215  3761.095215  1722.192749  206864 2000-01-07
-2000-01-10  3902.136230  3996.163574  3862.958252  3862.958252  1768.835205  141350 2000-01-10
-...                 ...          ...          ...          ...          ...     ...        ...
-2022-01-27   485.000000   490.000000   461.000000   467.000000   467.000000  129986 2022-01-27
-2022-01-28   475.000000   475.000000   445.000000   450.000000   450.000000  243373 2022-01-28
-2022-01-31   455.000000   479.000000   444.000000   450.000000   450.000000  334563 2022-01-31
-2022-02-01   460.000000   460.000000   431.000000   445.000000   445.000000  193173 2022-02-01
-2022-02-02   444.000000   450.000000   435.000000   449.000000   449.000000  350496 2022-02-02
-
-[5682 rows x 7 columns]
-```
-
-##### made with ❤️ by Ashlin Darius Govindasamy - ADGSTUDIOS 2022
+def GetStockHistory(Code):
+    df = yf.download(Code+'.JO')
+    df['Date'] = df.index
+    return df

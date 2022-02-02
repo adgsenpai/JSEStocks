@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     #metadata here
-    name="mymodule",
+    name="JSEStocks",
     version="0.0.1",
     author="Ashlin Darius Govindasamy",
     author_email="adg@adgstudios.co.ZA",
     url="https://www.adgstudios.co.za",
-    description="templete for module generation",
+    description="a module that returns all the stock data in JSE",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -17,5 +17,5 @@ setup(
     #license here
     license='MIT', 
     #modules here
-    install_requires=["numpy"]
+    install_requires=["numpy","yfinance"]
 )
