@@ -1,14 +1,5 @@
 import yfinance as yf
-import os, sys
 
-class HiddenPrints:
-    def __enter__(self):
-        self._original_stdout = sys.stdout
-        sys.stdout = open(os.devnull, 'w')
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        sys.stdout.close()
-        sys.stdout = self._original_stdout
 
 def ReturnListStocks():
     stocks = '''
@@ -358,7 +349,226 @@ def ReturnListStocks():
         '''
     print(stocks)
 
+
+def ReturnSouthAfricanETFs():
+    companyNames = [
+        "1nvest Top 40 ETF",
+        "1nvest SWIX 40 ETF",
+        "FNB Top 40 ETF",
+        "Satrix 40 ETF",
+        "Satrix SWIX Top 40 ETF",
+        "Sygnia Itrix SWIX 40 ETF",
+        "Sygnia Itrix Top 40 ETF",
+        "CoreShares Next 40",
+        "CoreShares Wealth Top 20",
+        "CoreShares Top 50 ETF",
+        "CoreShares DivTrax ETF",
+        "FNB Mid Cap ETF",
+        "Satrix S&P GIVI SA Top 50 ETF",
+        "Satrix Volatility Managed Defensive Equity ETF",
+        "Satrix Volatility Managed High Growth Equity ETF",
+        "Satrix Volatility Managed Moderate Equity ETF",
+        "Satrix Equity Momentum  ETF",
+        "Satrix Value Equity ETF",
+        "Satrix Low Volatility Equity ETF",
+        "Satrix Shari'ah Top 40 ETF",
+        "CoreShares Scientific Beta Mult-Factor ETF",
+        "Satrix Capped All Share ETF",
+        "Satrix DIVI ETF",
+        "Satrix FINI ETF",
+        "Satrix Inclusion & Diversity ETF",
+        "Satrix INDI ETF",
+        "Satrix Momentum ETF",
+        "Satrix  Quality South Africa ETF",
+        "Satrix RAFI 40 ETF",
+        "Satrix RESI ETF",
+        "CoreShares S&P 500 ETF",
+        "1nvest S&P 500 Index Feeder ETF",
+        "1nvest S&P 500 Info Tech Index Feeder ETF",
+        "1nvest MSCI EM Asia Index Feeder ETF",
+        "1nvest MSCI Wordld Socially Responsible Investment Index Feeder ETF",
+        "1nvest MSCI World Index Feeder ETF",
+        "FNB Global 1200 Equity Fund of Funds ETF",
+        "CoreShares Total World Stock Feeder ETF",
+        "CoreShares S&P Global Dividend Aristocrats ETF",
+        "Satrix S&P 500 ETF",
+        "Satrix MSCI China ETF",
+        "Satrix Smart City Infrastructure Feeder ETF",
+        "Satrix MSCI EM ESG Enhanced ETF",
+        "Satrix MSCI Emerging Markets ETF",
+        "Satrix MSCI World ESG Enhanced ETF",
+        "Satrix Healthcare Innovation Feeder ETF",
+        "Satrix Global Infrastucture ETF",
+        "Satrix MSCI India ETF",
+        "Satrix Nasdaq 100 ETF",
+        "Satrix MSCI World ETF",
+        "Sygnia Itrix 4th Industrial Revolution Global Equity ETF",
+        "Sygnia Itrix S&P 500",
+        "Sygnia Itrix New China Sectors ETF",
+        "Sygnia Itrix MSCI Emerging Markets 50 ETF",
+        "Sygnia Itrix S&P Global 1200 ESG ETF",
+        "Sygnia DJ EuroStoxx 50 ETF",
+        "Sygnia Itrix Solactive Healthcare 150 ETF",
+        "Sygnia Itrix MSCI Japan ETF",
+        "Sygnia Itrix Sustainable Economy ETF",
+        "Sygnia Itrix FTSE 100 ETF",
+        "Sygnia Itrix MSCI USA ETF",
+        "Sygnia Itrix MSCI World ETF",
+        "1nvestGold ETF",
+        "1nvestPalladium ETF",
+        "1nvestPlatinum ETF",
+        "1nvestRhodium ETF",
+        "NewGold ETF",
+        "Krugerrand  Custodial Certificate",
+        "NewPalladium ETF",
+        "NewPlat ETF",
+        "CoreShares Wealth GOVI ETF",
+        "CoreShares Yield Selected Bond ETF",
+        "1nvest SA Bond ETF",
+        "FNB Inflation ETF",
+        "Satrix GOVI ETF",
+        "Satrix ILBI ETF",
+        "Satrix SA Bond ETF",
+        "Satrix ILBI ETF",
+        "Dollar Custodial Certificate  - 10 Year",
+        "Dollar Custodial Certificate - 2 Year",
+        "1nvest Global Government Bond Index Feeder ETF",
+        "1nvest ICE US Treasury Short Bond Index ETF",
+        "FNB World Government Bond ETF",
+        "Satrix S&P Namibia Bond ETF",
+        "Satrix Global Aggregate Bond ETF",
+        "Satrix TRACI 3 Month  ETF",
+        "Satrix Multi Asset Passive Portfolios Solutions Growth ETF",
+        "Satrix Multi Asset Passive Portfolios Solutions Protect ETF",
+        "CoreShares SA Property Income ETF",
+        "1nvest SA Property ETF",
+        "Satrix Property ETF",
+        "1nvest Global REIT Index Feeder ETF",
+        "Satrix Reitway Global Property ETF",
+        "Coreshares  S&P Global Property ETF",
+        "Reitway Global Property ESG Prescient ETF",
+        "Reitway Global Property Diversified Prescient ETF",
+        "Sygnia Itrix Global Property ETF",
+    ]
+
+    codes = [
+        "ETFT40",
+        "ETFSWX",
+        "FNBT40",
+        "STX40",
+        "STXSWX",
+        "SYGSW4",
+        "SYGT40",
+        "CSNT40",
+        "CTOP20",
+        "CTOP50",
+        "DIVTRX",
+        "FNBMID",
+        "STXT50",
+        "STXDEQ",
+        "STXGEQ",
+        "STXMEQ",
+        "STXEQM",
+        "STXVEQ",
+        "STXLVL",
+        "STXSHA",
+        "SMART",
+        "STXCAP",
+        "STXDIV",
+        "STXFIN",
+        "STXID",
+        "STXIND",
+        "STXMMT",
+        "STXQUA",
+        "STXRAF",
+        "STXRES",
+        "CSP500",
+        "ETF500",
+        "ETF5IT",
+        "ETFEMA",
+        "ETFSRI",
+        "ETFWLD",
+        "FNBEQF",
+        "GLOBAL",
+        "GLODIV",
+        "STX500",
+        "STXCHN",
+        "STXCTY",
+        "STXEME",
+        "STXEMG",
+        "STXESG",
+        "STXHLT",
+        "STXIFR",
+        "STXNDA",
+        "STXNDQ",
+        "STXWDM",
+        "SYG4IR",
+        "SYG500",
+        "SYGCN",
+        "SYGEMF",
+        "SYGESG",
+        "SYGEU",
+        "SYGH",
+        "SYGJP",
+        "SYGSE",
+        "SYGUK",
+        "SYGUS",
+        "SYGWD",
+        "ETFGLD",
+        "ETFPLD",
+        "ETFPLT",
+        "ETFRHO",
+        "GLD",
+        "KCCGLD",
+        "NGPLD",
+        "NGPLT",
+        "CSGOVI",
+        "CSYSB",
+        "ETFBND",
+        "FNBINF",
+        "STXGVI",
+        "STXIFL",
+        "STXGOV",
+        "STXILB",
+        "DCCUSD",
+        "DCCUS2",
+        "ETFGGB",
+        "ETFUSD",
+        "FNBWGB",
+        "STXNAM",
+        "STXGBD",
+        "STXTRA",
+        "STXMAG",
+        "STXMAP ",
+        "CSPROP",
+        "ETFSAP",
+        "STXPRO",
+        "ETFGRE",
+        "STXGPR",
+        "GLPROP",
+        "RWESG",
+        "RWDVF",
+        "SYGP",
+    ]
+
+    for i in range(len(companyNames)):
+        print(companyNames[i] + " - " + codes[i])
+
+
 def GetStockHistory(Code):
     df = yf.download(Code+'.JO')
     df['Date'] = df.index
     return df
+
+
+def GetStockHistoryAllMarkets(Code):
+    df = yf.download(Code)
+    df['Date'] = df.index
+    return df
+
+
+if __name__ == '__main__':
+    ReturnSouthAfricanETFs()
+    # GetStockHistoryAllMarkets('AAPL')
+    # GetStockHistory('AAPL')
+    # ReturnListStocks()
