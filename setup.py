@@ -10,7 +10,7 @@ setup(
     long_description_content_type='text/markdown',
     version="0.0.3",
     author="Ashlin Darius Govindasamy",
-    author_email="adg@adgstudios.co.ZA",
+    author_email="adg@adgstudios.co.za",
     url="https://www.adgstudios.co.za",
     description="a module that returns all the stock data in JSE",
     packages=find_packages(),

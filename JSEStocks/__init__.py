@@ -1,6 +1,5 @@
 import yfinance as yf
 
-
 def ReturnListStocks():
     stocks = '''
         StockCode,CompanyNames
